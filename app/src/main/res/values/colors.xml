@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#F0DCAD</color>
+    <color name="input_field">#D0C09A</color>
+    <color name="black">#201208</color>
+    <color name="white">#F2F2F2</color>
+    <color name="orange">#E4874E</color>
+    <color name="green">#4C7A2F</color>
+    <color name="red">#C90403</color>
+    <color name="dark_green">#1F4D03</color>
 </resources>

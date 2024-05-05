@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Mi-Mi Pizza</string>
+    <string name="slogan">Вкусная пицца - повод влюбиться!</string>
+    <string name="login_input_field">Логин*</string>
+    <string name="password_input_field">Пароль*</string>
+
+    <string name="authorization_title">Авторизация</string>
+    <string name="authorization_first_enter"><u>Вы у нас впервые?</u></string>
+    <string name="authorization_forgot_password"><u>Забыли пароль?</u></string>
+    <string name="authorization_enter">Войти</string>
+
+    <string name="registration_title">Регистрация</string>
+    <string name="registration_login_input_field">Придумайте логин*</string>
+    <string name="registration_password_input_field">Придумайте пароль*</string>
+    <string name="registration_password_again_input_field">Повторите пароль*</string>
+    <string name="registration_button">Будем знакомы</string>
+
+    <string name="forgot_password_title">Смена пароля</string>
+    <string name="forgot_password_change_password">Изменить пароль</string>
+
+    <string name="delivery_address">Адрес доставки: проспект Вернадского, д. 78\n<u>Указать другой адрес</u></string>
+    <string name="menu_title">Наши пиццы</string>
+
+    <string name="author_mail">pashkovvv00@gmail.com</string>
+    <string name="author_gitHub">https://github.com/BattleCrow-dev</string>
+    <string name="app_info">\tДанное приложение разработанно в рамках курсовой работы по дисциплине \'Разработка мобильных приложений\' студентом РТУ МИРЭА. \n\tПриложение и его автор не предоставляют никаких услуг. ПО создано исключительно в образовательных целях.</string>
 </resources>

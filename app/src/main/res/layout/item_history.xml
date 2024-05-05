@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:orientation="vertical"
+    android:background="@drawable/green_button"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:columnCount="2"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/history1"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/history2"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/history3"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/history4"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="128dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/textViewProductName"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="11.06.2004"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/textViewProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center_vertical"
+                android:text="Пепперони\nМаргарита\nДиабло\nМясная"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/textViewProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:textAlignment="center"
+                android:text="Цена: 1698 руб."
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonBuy"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:text="Повторить заказ"
+        android:textSize="18sp"
+        style="@style/AppOrangeButton"
+        android:padding="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+</LinearLayout>

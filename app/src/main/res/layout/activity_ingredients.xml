@@ -1,0 +1,174 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIngredients">
+
+        <LinearLayout
+            android:id="@+id/layoutBackAndOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/layoutInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewIngredients">
+
+            <ImageView
+                android:id="@+id/imageViewBackArrow"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/back_arrow"/>
+
+            <Button
+                android:id="@+id/buttonSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="S"
+                android:textSize="24sp"
+                android:layout_marginTop="25dp"
+                style="@style/AppGreenButton"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/buttonMedium"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="M"
+                android:textSize="32sp"
+                android:layout_marginTop="10dp"
+                style="@style/AppGreenButton"
+                android:padding="0dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/buttonLarge"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="L"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                style="@style/AppGreenButton"
+                android:padding="0dp"
+                android:textColor="@color/black"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonThin"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/thin_hand"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                style="@style/AppGreenButton"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonThick"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/thick_hand"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                style="@style/AppGreenButton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@+id/layoutBackAndOptions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewIngredients">
+
+        <ImageView
+            android:id="@+id/imageViewPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/textViewPizzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пепперони"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewPizzaDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средняя 30 см, тонкое тесто, 590г."
+            android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textViewIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Ингредиенты: Пикантная пепперони, моцарелла, томатный соус"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAdditionalIngredients"/>
+
+    <TextView
+        android:id="@+id/textViewAdditionalIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дополнительные ингредиенты"
+        android:layout_below="@id/textViewIngredients"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIngredients"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientsList"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ingredientsList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditionalIngredients"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddToCart">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/buttonAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="В корзину за 569 руб."
+        android:layout_margin="10dp"
+        android:textSize="24dp"
+        style="@style/AppGreenButton"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

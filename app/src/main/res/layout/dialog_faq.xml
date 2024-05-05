@@ -1,0 +1,44 @@
+<!-- dialog_faq.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/green_button"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заголовок"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ответ"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Теперь всё понятно, спасибо!"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_gravity="end">
+    </TextView>
+
+</LinearLayout>

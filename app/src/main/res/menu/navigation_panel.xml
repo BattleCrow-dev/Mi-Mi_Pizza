@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_1"
+        android:icon="@drawable/home_button"
+        android:title="Меню" />
+    <item
+        android:id="@+id/menu_item_2"
+        android:icon="@drawable/help_button"
+        android:title="Помощь" />
+    <item
+        android:id="@+id/menu_item_3"
+        android:icon="@drawable/cart_button"
+        android:title="Корзина" />
+</menu>
