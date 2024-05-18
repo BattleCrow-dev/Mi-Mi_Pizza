@@ -6,7 +6,7 @@
     <LinearLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="360dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/layoutBackAndOptions"
             android:layout_width="wrap_content"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -33,20 +33,20 @@
 
             <Button
                 android:id="@+id/buttonSmall"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:text="S"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:layout_marginTop="25dp"
                 style="@style/AppGreenButton"
                 android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/buttonMedium"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:text="M"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:layout_marginTop="10dp"
                 style="@style/AppGreenButton"
                 android:padding="0dp"
@@ -87,7 +87,7 @@
         <LinearLayout
             android:id="@+id/layoutInfo"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center_horizontal"
             android:layout_margin="10dp"
@@ -164,7 +164,7 @@
         android:layout_height="wrap_content"
         android:text="В корзину за 569 руб."
         android:layout_margin="10dp"
-        android:textSize="24dp"
+        android:textSize="24sp"
         style="@style/AppGreenButton"
         app:layout_constraintTop_toBottomOf="@+id/ingredientsList"
         app:layout_constraintStart_toStartOf="parent"

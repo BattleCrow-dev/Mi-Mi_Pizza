@@ -1,11 +1,11 @@
 package com.battlecrow.mimipizza;
 
 public class Ingredient {
-    private int imageResource;
-    private String name;
-    private String price;
+    private final int imageResource;
+    private final String name;
+    private final int price;
 
-    public Ingredient(int imageResource, String name, String price) {
+    public Ingredient(int imageResource, String name, int price) {
         this.imageResource = imageResource;
         this.name = name;
         this.price = price;
@@ -19,7 +19,7 @@ public class Ingredient {
         return name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 }

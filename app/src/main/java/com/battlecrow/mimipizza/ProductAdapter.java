@@ -1,8 +1,7 @@
 package com.battlecrow.mimipizza;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,9 +13,11 @@ import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
     private final List<Product> productList;
+    private final MenuFragment frag;
 
-    public ProductAdapter(List<Product> productList) {
+    public ProductAdapter(List<Product> productList, MenuFragment frag) {
         this.productList = productList;
+        this.frag = frag;
     }
 
     @NonNull
@@ -30,6 +31,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.bind(product);
+        holder.binding.buttonBuy.setOnClickListener(v -> frag.openIngredients(product));
     }
 
     @Override
@@ -45,16 +47,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             this.binding = binding;
         }
 
+        @SuppressLint("SetTextI18n")
         public void bind(Product product) {
             binding.imageViewProduct.setImageResource(product.getImageResId());
             binding.textViewProductName.setText(product.getName());
             binding.textViewProductDescription.setText(product.getDescription());
-            binding.textViewProductPrice.setText(product.getPrice());
-            binding.buttonBuy.setOnClickListener(v -> {
-                Intent intent = new Intent(v.getContext(), IngredientsActivity.class);
-                intent.putExtra("pizzaID", product.getImageResId());
-                v.getContext().startActivity(intent);
-            });
+            binding.textViewProductPrice.setText("Цена: от " + product.getPrice() + " руб.");
         }
     }
 }

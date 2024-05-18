@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите адрес"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:text="(доставляем только по Москве)"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextStreet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSubtitle"
+        android:hint="Улица*"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textColor="@color/black"
+        android:background="@drawable/input_field"
+        android:padding="10dp"
+        android:inputType="text"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextHouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextStreet"
+        android:hint="Дом*"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textColor="@color/black"
+        android:background="@drawable/input_field"
+        android:padding="10dp"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextApartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextHouse"
+        android:hint="Квартира (опционально)"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textColor="@color/black"
+        android:background="@drawable/input_field"
+        android:padding="10dp"
+        android:inputType="number"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextApartment"
+        android:layout_centerHorizontal="true"
+        android:text="Сюда"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        style="@style/AppGreenButton"/>
+
+</RelativeLayout>

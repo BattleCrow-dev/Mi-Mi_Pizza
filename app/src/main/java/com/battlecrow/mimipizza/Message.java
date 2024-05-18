@@ -1,8 +1,13 @@
 package com.battlecrow.mimipizza;
 
 public class Message {
-    private String content;
-    private boolean sent;
+    private final String content;
+    private final boolean sent;
+
+    public Message() {
+        this.content = "";
+        this.sent = false;
+    }
 
     public Message(String content, boolean sent) {
         this.content = content;

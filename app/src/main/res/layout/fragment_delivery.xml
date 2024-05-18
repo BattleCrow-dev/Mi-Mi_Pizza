@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textViewDeliveryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ожидайте курьера..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/imageViewDeliveryAnimation"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/delivery"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewDeliveryTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Состояние доставки отслеживайте в уведомлении!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:id="@+id/buttonCancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отменить заказ"
+        style="@style/AppRedButton"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"/>
+
+</LinearLayout>

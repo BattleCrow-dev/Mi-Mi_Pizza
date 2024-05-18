@@ -1,6 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="110dp"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/green_button"
     android:gravity="center_horizontal"
@@ -11,16 +12,24 @@
         android:id="@+id/imageIngredient"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIngredientName"/>
 
     <TextView
         android:id="@+id/textViewIngredientName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Сырный борт"
+        android:text="Грибы"
         android:textAlignment="center"
         android:textSize="16sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/imageIngredient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIngredientPrice"/>
 
     <TextView
         android:id="@+id/textViewIngredientPrice"
@@ -28,6 +37,10 @@
         android:layout_height="wrap_content"
         android:text="199 руб."
         android:textSize="14sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIngredientName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

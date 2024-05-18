@@ -18,10 +18,13 @@
     <string name="forgot_password_title">Смена пароля</string>
     <string name="forgot_password_change_password">Изменить пароль</string>
 
-    <string name="delivery_address">Адрес доставки: проспект Вернадского, д. 78\n<u>Указать другой адрес</u></string>
+    <string name="delivery_address"><u>Указать другой адрес</u></string>
     <string name="menu_title">Наши пиццы</string>
 
     <string name="author_mail">pashkovvv00@gmail.com</string>
     <string name="author_gitHub">https://github.com/BattleCrow-dev</string>
     <string name="app_info">\tДанное приложение разработанно в рамках курсовой работы по дисциплине \'Разработка мобильных приложений\' студентом РТУ МИРЭА. \n\tПриложение и его автор не предоставляют никаких услуг. ПО создано исключительно в образовательных целях.</string>
+    <string name="channel_name">channel name</string>
+    <string name="channel_description">channel description</string>
+    <string name="version">Версия приложения: 1.0.4</string>
 </resources>

@@ -21,28 +21,28 @@
                 android:layout_width="54dp"
                 android:layout_height="54dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/peperoni" />
 
             <ImageView
                 android:id="@+id/history2"
                 android:layout_width="54dp"
                 android:layout_height="54dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/mehiko" />
 
             <ImageView
                 android:id="@+id/history3"
                 android:layout_width="54dp"
                 android:layout_height="54dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/gavaiskaya" />
 
             <ImageView
                 android:id="@+id/history4"
                 android:layout_width="54dp"
                 android:layout_height="54dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logo" />
+                android:src="@drawable/derevenskaya" />
 
         </GridLayout>
 
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:gravity="center_vertical"
-                android:text="Пепперони\nМаргарита\nДиабло\nМясная"
+                android:text="Пепперони\nМехико\nГавайская\nДеревенская"
                 android:textSize="14sp"
                 android:textColor="@color/white"/>
 
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:textAlignment="center"
-                android:text="Цена: 1698 руб."
+                android:text="Цена: 2684 руб."
                 android:textColor="@color/white"
                 android:textSize="16sp"/>
 
@@ -91,6 +91,7 @@
         android:text="Повторить заказ"
         android:textSize="18sp"
         style="@style/AppOrangeButton"
+        android:backgroundTint="#BFFF914E"
         android:padding="0dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"/>

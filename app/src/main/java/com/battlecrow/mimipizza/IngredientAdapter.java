@@ -1,10 +1,8 @@
 package com.battlecrow.mimipizza;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,10 +13,12 @@ import java.util.List;
 
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.ViewHolder> {
 
-    private List<Ingredient> ingredientList;
+    private final List<Ingredient> ingredientList;
+    private static IngredientsActivity activity;
 
-    public IngredientAdapter(List<Ingredient> ingredientList) {
+    public IngredientAdapter(List<Ingredient> ingredientList, IngredientsActivity activity) {
         this.ingredientList = ingredientList;
+        IngredientAdapter.activity = activity;
     }
 
     @NonNull
@@ -49,17 +49,22 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.Vi
             this.binding = binding;
             binding.getRoot().setOnClickListener(v -> {
                 isHighlighted = !isHighlighted;
-                if (isHighlighted)
+                if (isHighlighted) {
+                    activity.addAddedPrice(Integer.parseInt(binding.textViewIngredientPrice.getText().toString().split(" ")[0]), binding.textViewIngredientName.getText().toString());
                     binding.getRoot().setAlpha(0.5f);
-                else
+                }
+                else {
+                    activity.addAddedPrice(-Integer.parseInt(binding.textViewIngredientPrice.getText().toString().split(" ")[0]), binding.textViewIngredientName.getText().toString());
                     binding.getRoot().setAlpha(1.0f);
+                }
             });
         }
 
+        @SuppressLint("SetTextI18n")
         public void bind(Ingredient ingredient) {
             binding.imageIngredient.setImageResource(ingredient.getImageResource());
             binding.textViewIngredientName.setText(ingredient.getName());
-            binding.textViewIngredientPrice.setText(ingredient.getPrice());
+            binding.textViewIngredientPrice.setText(ingredient.getPrice() + " руб.");
         }
     }
 }

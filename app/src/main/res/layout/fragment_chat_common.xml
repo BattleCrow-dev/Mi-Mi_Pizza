@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp">
 
-    <!-- Заголовок чата -->
     <TextView
         android:id="@+id/textViewChatTitle"
         android:layout_width="match_parent"
@@ -18,7 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/listViewChatMessages"/>
 
-    <!-- Список сообщений -->
     <ListView
         android:id="@+id/listViewChatMessages"
         android:layout_width="match_parent"
@@ -31,7 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/editTextMessage"/>
 
-    <!-- Поле для ввода сообщения -->
     <EditText
         android:id="@+id/editTextMessage"
         android:layout_width="match_parent"
@@ -39,6 +36,7 @@
         android:hint="Введите сообщение"
         android:background="@drawable/input_field"
         android:padding="10dp"
+        android:layout_marginEnd="64dp"
         android:cursorVisible="true"
         android:textCursorDrawable="@drawable/custom_cursor"
         android:layout_marginTop="10dp"
@@ -47,15 +45,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listViewChatMessages"/>
 
-    <!-- Кнопка отправки сообщения -->
     <ImageView
         android:id="@+id/buttonSendMessage"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="10dp"
+        android:layout_margin="10dp"
         android:src="@drawable/send_button"
         app:layout_constraintBottom_toBottomOf="@+id/editTextMessage"
-        app:layout_constraintEnd_toEndOf="@+id/editTextMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextMessage"
         app:layout_constraintTop_toTopOf="@+id/editTextMessage"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
