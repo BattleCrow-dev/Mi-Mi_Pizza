@@ -1,2 +1,2 @@
 # Mi-Mi_Pizza
- Course work on mobile application development
+Курсовая работа по разработке мобильных приложений
